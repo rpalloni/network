@@ -18,19 +18,22 @@ ____|     |      ||_|||_||
 
 
 # Berkeley sockets API (standard socket functions):
-### set up the listening socket: listens for connections from clients
+### * set up the listening socket: listens for connections from clients
 socket()
 bind()
 listen()
 accept() // server accepts client connection
 connect() // client establishes connection
-# The three-way handshake is important since it ensures that each side of the connection is reachable in the network,
-# in other words that the client can reach the server and vice-versa. 
-# It may be that only one host, client or server, can reach the other.
+_The three-way handshake is important since it ensures that each side of the connection is reachable in the network,
+in other words that the client can reach the server and vice-versa. 
+It may be that only one host, client or server, can reach the other._
 
-# exchanging data
+### * exchanging data
 send()
 recv()
 
-# close respective sockets
+### * close respective sockets
 close()
+
+![tcp-socket-flow](https://user-images.githubusercontent.com/17080117/147975429-3615c769-ca89-45a3-90c0-324b24c08d82.png)
+
