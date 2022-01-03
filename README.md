@@ -3,10 +3,11 @@ A network is a group of IP addresses
 Network configuration for each host (device) depends on the ip and subnet mask => network ip
 
 # socket
-A socket is the software component to enable the communication between processes working on two physically separate machines. \
+A socket is the software component to enable the communication between processes working on two physically separate machines. 
 From an application point of view, it is a particular object on which to read and write the data to be transmitted or received. 
 ~~~
-a socket is the 'standard interface' to connect common electronic devices to the home electric network
+a socket is the 'standard interface' to connect common 
+electronic devices to the home electric network
 
     SOCKET         PLUG
      _____        _______
