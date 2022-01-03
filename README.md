@@ -19,17 +19,17 @@ ____|     |      ||_|||_||
 
 # Berkeley sockets API (standard socket functions):
 ### * set up the listening socket: listens for connections from clients
-socket()
-bind()
-listen()
-accept() // server accepts client connection
-connect() // client establishes connection
+socket() \
+bind() \
+listen() \
+accept() // server accepts client connection \
+connect() // client establishes connection \
 _The three-way handshake is important since it ensures that each side of the connection is reachable in the network,
 in other words that the client can reach the server and vice-versa. 
 It may be that only one host, client or server, can reach the other._
 
 ### * exchanging data
-send()
+send() \
 recv()
 
 ### * close respective sockets
