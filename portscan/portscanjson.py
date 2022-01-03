@@ -10,7 +10,7 @@ IPv4 = socket.AF_INET # Internet address family
 TCP = socket.SOCK_STREAM # Socket type (protocol used to transport the message)
 
 OPEN_PORTS = []
-PORTS_DATA_FILE = "./common_ports.json"
+PORTS_DATA_FILE = "./common_ports.json" # port:most-common-service
 
 
 def extract_json_data(filename):
@@ -20,14 +20,14 @@ def extract_json_data(filename):
 
 def get_ports_info():
     data = extract_json_data(PORTS_DATA_FILE)
-    ports_info = {int(k): v for (k, v) in data.items()}
+    ports_info = {int(k): v for (k, v) in data.items()} # convert port number to int
     return ports_info
 
 def get_host_ip_addr(target):
     try:
         ip_addr = socket.gethostbyname(target)
     except socket.gaierror as e:
-        # Get Address Info
+        # Get Address Info Error
         print(f"Error... {e}")
     else:
         return ip_addr
@@ -43,7 +43,7 @@ def scan_port(ip, port):
 
 if __name__ == "__main__":
     print("Testing purpose only: use scanme.nmap.org ")
-    target = input("Insert Target: ")  # scanme.nmap.org
+    target = input("Enter a web address: ")  # scanme.nmap.org
     ip_addr = get_host_ip_addr(target)
     ports_info = get_ports_info()
 

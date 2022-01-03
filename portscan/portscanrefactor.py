@@ -6,6 +6,7 @@ class bcolors:
     OKGREEN = '\033[92m'
     ENDCOL = '\033[0m'
 
+
 class PortScan:
 
     # class vars
@@ -34,7 +35,7 @@ class PortScan:
 
     def run(self):
         print("Testing purpose only: use scanme.nmap.org ")
-        target = input("Insert Target: ")  # scanme.nmap.org
+        target = input("Enter a web address: ")  # scanme.nmap.org
         self.remote_host = self.get_host_ip_addr(target)
         self.get_ports_info()
         for port in self.ports_info.keys():
@@ -55,8 +56,8 @@ class PortScan:
         try:
             ip_addr = socket.gethostbyname(target)
         except socket.gaierror as e:
-            # Get Address Info
-            print(f"C'è stato un errore... {e}")
+            # Get Address Info Error
+            print(f"Error... {e}")
         else:
             return ip_addr
 
