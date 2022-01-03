@@ -1,5 +1,5 @@
 # network
-A network is a group of IP addresses
+A network is a group of IP addresses. \
 Network configuration for each host (device) depends on the ip and subnet mask => network ip
 
 # socket
