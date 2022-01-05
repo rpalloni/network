@@ -1,6 +1,6 @@
 # network
 A network is a group of IP addresses. \
-Network configuration for each host (device) depends on the ip and subnet mask => network ip
+Network configuration for each host (device) depends on the ip and subnet mask => network ip.
 
 # socket
 A socket is the software component to enable the communication between processes working on two physically separate machines. 
@@ -24,9 +24,6 @@ bind() \
 listen() \
 accept() // server accepts client connection \
 connect() // client establishes connection \
-_The three-way handshake is important since it ensures that each side of the connection is reachable in the network,
-in other words that the client can reach the server and vice-versa. 
-It may be that only one host, client or server, can reach the other._
 
 ### * exchanging data
 send() \
@@ -36,4 +33,8 @@ recv()
 close()
 
 ![tcp-socket-flow](https://user-images.githubusercontent.com/17080117/147975429-3615c769-ca89-45a3-90c0-324b24c08d82.png)
+
+_The three-way handshake is important since it ensures that each side of the connection is reachable in the network,
+in other words that the client can reach the server and vice-versa. 
+It may be that only one host, client or server, can reach the other._
 
