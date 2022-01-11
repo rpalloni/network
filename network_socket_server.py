@@ -2,7 +2,7 @@
 import socket
 
 HOST = '127.0.0.1'  # Standard loopback interface address (localhost)
-PORT = 65432        # Port to listen on (non-privileged ports are > 1023)
+PORT = 65416        # Port to listen on (non-privileged ports are > 1023)
 IPv4 = socket.AF_INET # Internet address family
 TCP = socket.SOCK_STREAM # Socket type (protocol used to transport the message)
 
@@ -12,12 +12,13 @@ with socket.socket(IPv4, TCP) as s:
     s.listen() # listening socket object: accepts new connections from clients
     conn, addr = s.accept() # communication socket object: exchanges data with connected clients
     with conn:
-        print('Connected by', addr)
+        print('Accepted connection from', addr) # printed port will be different on localhost
         while True:
             data = conn.recv(1024)
+            print('Logging data: ', data)
             if not data:
                 break
-            conn.sendall(data) # srves only ONE client and then exits
+            conn.sendall(data) # serves only ONE client and then exits
 
 # netstat --listening --tcp
 # Active Internet connections (only servers)
