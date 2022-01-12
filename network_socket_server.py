@@ -2,7 +2,7 @@
 import socket
 
 HOST = '127.0.0.1'  # Standard loopback interface address (localhost)
-PORT = 6540         # Port to listen on (non-privileged ports are > 1023)
+PORT = 6550         # Port to listen on (non-privileged ports are > 1023)
 IPv4 = socket.AF_INET # Internet address family
 TCP = socket.SOCK_STREAM # Socket type (protocol used to transport the message)
 
